@@ -1,0 +1,71 @@
+@model PayrollWebApp.Models.SalaryRecord
+
+@{
+    ViewData["Title"] = "Payslip";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4 p-4 bg-light bg-opacity-75">
+        <div class="card-body">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold text-success"><i class="bi bi-cash-coin"></i> Employee Payslip</h3>
+                <p class="text-muted">Month: <strong>@Model.Month</strong></p>
+                <hr />
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <p><strong>Employee ID:</strong> @Model.EmployeeId</p>
+                    <p><strong>Name:</strong> @Model.EmployeeName</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Designation:</strong> @Model.Designation</p>
+                    <p><strong>Department:</strong> @Model.Department</p>
+                </div>
+            </div>
+
+            <table class="table table-bordered text-center">
+                <thead class="table-success">
+                    <tr><th>Earnings</th><th>Amount</th><th>Deductions</th><th>Amount</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic Salary</td>
+                        <td>@Model.BasicSalary.ToString("N2")</td>
+                        <td>Tax/PF</td>
+                        <td>@Model.Deductions.ToString("N2")</td>
+                    </tr>
+                    <tr>
+                        <td>Allowances</td>
+                        <td>@Model.Allowances.ToString("N2")</td>
+                        <td>Other</td>
+                        <td>0.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="table-light">
+                        <th colspan="2" class="text-end">Net Salary</th>
+                        <th colspan="2" class="text-success fw-bold">₹@Model.NetSalary.ToString("N2")</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-primary me-2" onclick="window.print()">
+                    <i class="bi bi-printer"></i> Print
+                </button>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Back
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @@media print {
+        .btn, nav, footer { display: none !important; }
+        .card { box-shadow: none; border: none; }
+    }
+</style>

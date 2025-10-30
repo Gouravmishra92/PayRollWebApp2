@@ -1,0 +1,41 @@
+@model PayrollWebApp.Models.Employee
+@{
+    ViewData["Title"] = "Employee Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0 rounded-4 bg-light bg-opacity-75">
+        <div class="card-header bg-primary text-white rounded-top-4">
+            <h4 class="mb-0"><i class="bi bi-person-circle"></i> @Model.Name</h4>
+        </div>
+
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary">Department</h6>
+                    <p>@Model.Department</p>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="fw-bold text-secondary">Designation</h6>
+                    <p>@Model.Designation</p>
+                </div>
+            </div>
+            <hr />
+            <div class="row mb-3">
+                <div class="col-md-4"><h6>Basic Salary</h6><p>₹@Model.BasicSalary.ToString("N2")</p></div>
+                <div class="col-md-4"><h6>Allowances</h6><p class="text-success">+ ₹@Model.Allowances.ToString("N2")</p></div>
+                <div class="col-md-4"><h6>Deductions</h6><p class="text-danger">− ₹@Model.Deductions.ToString("N2")</p></div>
+            </div>
+            <div class="text-center border-top pt-3">
+                <h5 class="fw-bold text-primary">Net Salary</h5>
+                <h4 class="fw-bold text-success">₹@Model.NetSalary.ToString("N2")</h4>
+            </div>
+        </div>
+
+        <div class="card-footer bg-white text-end">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i> Edit</a>
+            <a asp-action="Index" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Back</a>
+        </div>
+    </div>
+</div>

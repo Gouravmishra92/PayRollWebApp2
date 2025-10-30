@@ -1,0 +1,24 @@
+[
+  {
+    "Id": 1,
+    "Name": "Gourav Mishra",
+    "Department": "computer",
+    "Designation": "engineer",
+    "BasicSalary": 50000,
+    "Allowances": 10000,
+    "Deductions": 2000,
+    "NetSalary": 58000,
+    "JoiningDate": "2025-10-01T00:00:00"
+  },
+  {
+    "Id": 2,
+    "Name": "Bhairulal Teli",
+    "Department": "xyz",
+    "Designation": "abc",
+    "BasicSalary": 90000,
+    "Allowances": 12000,
+    "Deductions": 10000,
+    "NetSalary": 92000,
+    "JoiningDate": "2025-10-02T00:00:00"
+  }
+]

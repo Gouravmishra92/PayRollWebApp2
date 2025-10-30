@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "EmployeeId": 1,
+    "EmployeeName": "Gourav Mishra",
+    "Department": "computer",
+    "Designation": "engineer",
+    "Month": "October 2025",
+    "BasicSalary": 50000,
+    "Allowances": 10000,
+    "Deductions": 2000,
+    "NetSalary": 58000
+  },
+  {
+    "Id": 2,
+    "EmployeeId": 2,
+    "EmployeeName": "Bhairulal Teli",
+    "Department": "xyz",
+    "Designation": "abc",
+    "Month": "October 2025",
+    "BasicSalary": 90000,
+    "Allowances": 12000,
+    "Deductions": 10000,
+    "NetSalary": 92000
+  },
+  {
+    "Id": 3,
+    "EmployeeId": 1,
+    "EmployeeName": "Gourav Mishra",
+    "Department": "computer",
+    "Designation": "engineer",
+    "Month": "October 2025",
+    "BasicSalary": 50000,
+    "Allowances": 10000,
+    "Deductions": 2000,
+    "NetSalary": 58000
+  }
+]
